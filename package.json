@@ -1,0 +1,39 @@
+{
+  "name": "console-expect",
+  "version": "1.0.0",
+  "description": "Wraps the console so you can test it better",
+  "main": "lib/index.js",
+  "types": "lib/index.d.ts",
+  "scripts": {
+    "test": "mocha --require ts-node/register tests/index.ts --reporter progress",
+    "build": "tsc --project src/tsconfig.json",
+    "prepublishOnly": "npm run build"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/toxicFork/console-expect.git"
+  },
+  "keywords": [
+    "console",
+    "expect",
+    "test"
+  ],
+  "author": "toxicFork",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/toxicFork/console-expect/issues"
+  },
+  "homepage": "https://github.com/toxicFork/console-expect#readme",
+  "devDependencies": {
+    "@types/chai": "^4.0.4",
+    "@types/mocha": "^2.2.43",
+    "@types/node": "^8.0.33",
+    "chai": "^4.1.2",
+    "mocha": "^4.0.1",
+    "ts-node": "^3.3.0",
+    "typescript": "^2.5.3"
+  },
+  "dependencies": {
+    "assert": "^1.4.1"
+  }
+}

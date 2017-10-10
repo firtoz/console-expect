@@ -1,0 +1,20 @@
+{
+  "compilerOptions": {
+    "noImplicitAny": true,
+    "removeComments": false,
+    "declaration": true,
+    "sourceMap": true,
+    "module": "commonjs",
+    "target": "es5",
+    "lib": [
+      "dom",
+      "esnext"
+    ]
+  },
+  "include": [
+    "./**/*"
+  ],
+  "exclude": [
+    "../node_modules"
+  ]
+}
