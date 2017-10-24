@@ -123,6 +123,24 @@ ${stack}`);
     this.expect("error", args);
   }
 
+  public expectLogDev(...args: any[]) {
+    if (process.env.NODE_ENV !== "production") {
+      this.expect("log", args);
+    }
+  }
+
+  public expectWarnDev(...args: any[]) {
+    if (process.env.NODE_ENV !== "production") {
+      this.expect("warn", args);
+    }
+  }
+
+  public expectErrorDev(...args: any[]) {
+    if (process.env.NODE_ENV !== "production") {
+      this.expect("error", args);
+    }
+  }
+
   private expect(type: string, args: any[]) {
     const {
       receivedMessages,
